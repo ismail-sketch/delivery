@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Food delivery</title>
+</head>
+<body>
+
+<section class="main">
+    <div class="container">
+        <div class="header">
+            <div class="menu-wrp">
+                <nav class="menu">
+                    <div class="menu__item">
+                        <a href="#">Оплата</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="#">О нас</a>
+                    </div>
+                    <div class="menu__item">
+                      <a href="#">Контакты</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="logo">
+                <img class="logo__image" src="img/logo2.svg" alt="logo">
+            </div>
+            <div class="timework-tel">
+                <div class="timework-tel__timework">
+                    <p>Ежедневно 11am - 9pm</p>
+                </div>
+                <div class="timework-tel__tel">
+                    <img src="img/tel.svg" alt="tel">
+                    <p>0 800 33 08 98</p>
+                </div>
+            </div>
+        </div><!-- header -->
+
+        <div class="header-adaptive">
+            <div class="logo">
+                <img class="logo__image" src="img/logo2.svg" alt="logo">
+            </div>
+            <div class="burger-wrp">
+                <a href="#" class="burger"><span></span></a>
+            </div>
+            <div class="menu-adaptive">
+                <div class="menu-wrp">
+                    <nav class="menu">
+                        <div class="menu__item">
+                            <a href="#">Оплата</a>
+                        </div>
+                        <div class="menu__item">
+                            <a href="#">О нас</a>
+                        </div>
+                        <div class="menu__item">
+                          <a href="#">Контакты</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="timework-tel">
+                    <div class="timework-tel__timework">
+                        <p>Ежедневно 11am - 9pm</p>
+                    </div>
+                    <div class="timework-tel__tel">
+                        <img src="img/tel.svg" alt="tel">
+                        <p>0 800 33 08 98</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <!-- /.header-adaptive -->
+
+        <h1 class="main__title">Доставка еды в Ковеле</h1>
+        <h3 class="main__subtitle">Если вы решили расслабиться или у вас появились неожиданные гости, звоните нам. Мы позаботимся о том, чтобы ваш отдых был комфортным, приятным и вкусным.</h3>
+        <div class="main__stock">
+            <p>При заказе на сумму от <span>700 UAN</span> доставка бесплатно!</p>
+        </div>
+        <div class="main__basket-wrp">
+            <div class="main__price-basket">
+               <span>= 0 ₴</span> 
+            </div>
+            <div class="main__image-basket">
+                <img src="img/basket-price.svg" alt="basket-price">
+                <span class="main__good-counter">0</span>
+            </div>
+        </div>
+        <!-- main__basket-wrp -->
+       
+        <div class="main__basket-repository">
+            <div class="main__repository-wrp">
+                <!-- <div class="main__counter-pricewrp">
+                    <div class="main__dishes-price-wrp">
+                        <p class="main__name-dishes">Пицца "Кватро Формаджи"</p>
+                        <p class="main__price-dishes"> <span>Цена:</span> 225 UAN</p>
+                    </div>
+                    <div class="main__counter-dishes">
+                        <span class="main__minus">-</span>
+                        <span class="main__count">0</span>
+                        <span class="main__plus">+</span>
+                        <img src="img/delete.svg" alt="delet" class="main__delete">
+                    </div>
+                </div> -->
+            </div> 
+            <p class="main__full-price"><span>Итогo:</span> &ensp; 0 ₴</p>
+        </div>
+        <!-- main__basket-repository -->
+    </div> 
+    <!-- container --> 
+</section>
+
+<section class="dishes">
+    <div class="container">
+        <h2 class="dishes__title">Популярные блюда</h2>
+        <div class="dishes__tabswrp">
+            <div class="dishes__tabs-row">
+                <div class="dishes__tab dishes__tab_active">Пицца</div>
+                <div class="dishes__tab">Роллы</div>
+                <div class="dishes__tab">Салаты</div>
+            </div>
+            <div class="dishes__tabs-row">
+                <div class="dishes__tab">Десерт</div>
+                <div class="dishes__tab">Напитки</div>
+            </div>
+            
+        </div>
+        <div class="dishes__cardswrp">
+            <div class="dishes__cardsrow">
+                <div class="dishes__card" data-name="pz1">
+                    <div class="dishes__hit">
+                        Хит
+                    </div>
+                    <img class="dishes__image" src="img/dishes/1.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Кватро формаджи</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Моцарелла, Чеддар, Блю, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">225 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card" data-name="pz2">
+                    <img class="dishes__image" src="img/dishes/2.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Карбонара</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Томаты, Чеддар, Соус чили, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">165 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card" data-name="pz3">
+                    <div class="dishes__hit">
+                        Хит
+                    </div>
+                    <img class="dishes__image" src="img/dishes/3.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Филадельфия</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Грибы, Чеддар, Соус томатный, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">181 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card" data-name="pz4">
+                    <img class="dishes__image" src="img/dishes/4.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Ди маре</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Оливки, Чеддар, Салями, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">187 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+            </div>
+
+            <div class="dishes__cardsrow dishes__cardsrow_two">
+                <div class="dishes__card" data-name="pz5">
+                    <img class="dishes__image" src="img/dishes/5.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Империя</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Перец болгарский, Томаты, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">169 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card" data-name="pz6">
+                    <img class="dishes__image" src="img/dishes/6.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Тропикана</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Куриное филе, Ананасы, Блю, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">209 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card" data-name="pz7">
+                    <img class="dishes__image" src="img/dishes/7.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Верона</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Лосось, Моцарелла, Соус томатный, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">197 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card" data-name="pz8">
+                    <img class="dishes__image" src="img/dishes/8.png" alt="">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Американа</h3>
+                            <h4>32cm</h4>
+                        </div>
+                        <p class="dishes__ingridients">Тесто, Моцарелла, Чеддар, Блю, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">209 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+               
+            </div>
+        </div>
+
+        <!-- РОЛЛЫ ========================================================-->
+         <div class="dishes__cardswrp"> 
+            <div class="dishes__cardsrow">
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol1.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Ролл с курицей </h3>
+                            <h4>270g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Куриное филе, сыр Филадельфия, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">73 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol2.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Маки с крабом</h3>
+                            <h4>110g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Краб, салат Чука, майонез Японский</p>
+                    </div>
+                    <p class="dishes__prise">35 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol3.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Ролл 4 сыра</h3>
+                            <h4>220g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Филадельфия, Сливочный, Пармезан, Дор-Блю</p>
+                    </div>
+                    <p class="dishes__prise">75 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol4.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Ролл трио</h3>
+                            <h4>235g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Лосось, Угорь, Авокадо, сыр Филадельфия</p>
+                    </div>
+                    <p class="dishes__prise">98 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+            </div>
+
+            <div class="dishes__cardsrow dishes__cardsrow_two">
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol5.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Филадельфия</h3>
+                            <h4>235g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Лосось, огурец, сыр Филадельфия, кунжут</p>
+                    </div>
+                    <p class="dishes__prise">79 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol6.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Ролл Джаз</h3>
+                            <h4>210g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Краб, Омлет, Пармезан, икра Масаго, кунжут</p>
+                    </div>
+                    <p class="dishes__prise">76 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol7.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Ролл Терияки</h3>
+                            <h4>200g</h4>
+                        </div>
+                        <p class="dishes__ingridients">лосось Терияки, сыр Филадельфия, лист салата</p>
+                    </div>
+                    <p class="dishes__prise">59 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/rolls/rol8.png" alt="roll">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Маки с креветкой</h3>
+                            <h4>110g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Креветка, соус Унаги</p>
+                    </div>
+                    <p class="dishes__prise">68 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+            </div>
+         </div> 
+    
+         <!-- САЛАТЫ==================================================== -->
+        
+        <div class="dishes__cardswrp"> 
+            <div class="dishes__cardsrow">
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/salats/salat1.png" alt="salat">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Con Parma</h3>
+                            <h4>230g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Шпинат, Помидор, Черри, Ветчина, Оливковое масло</p>
+                    </div>
+                    <p class="dishes__prise">135 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/salats/salat2.png" alt="salat">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Овощной с фетой</h3>
+                            <h4>210g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Шпинат, Помидор, Сыр Фета, Оливковое масло, Маслины</p>
+                    </div>
+                    <p class="dishes__prise">79 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/salats/salat3.png" alt="salat">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Цезарь</h3>
+                            <h4>280g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Руколла, Помидор, Куриные стрипсы, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">99 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+            </div>
+        </div> 
+
+        <!-- ДЕСЕРТ =================================================================-->
+
+        <div class="dishes__cardswrp"> 
+            <div class="dishes__cardsrow">
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/desert/desert1.png" alt="desert">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Тирамису</h3>
+                            <h4>160g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Взбитые сливки, палочки Савоярди, сыр Маскарпоне</p>
+                    </div>
+                    <p class="dishes__prise">55 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/desert/desert2.png" alt="desert">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Наполеон</h3>
+                            <h4>159g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Слоеные коржи, масляно-заварной крем</p>
+                    </div>
+                    <p class="dishes__prise">41 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/desert/desert3.png" alt="desert">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Темпура от шефа</h3>
+                            <h4>120g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Руколла, Помидор, Куриные стрипсы, Пармезан</p>
+                    </div>
+                    <p class="dishes__prise">31 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/desert/desert4.png" alt="desert">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Чизкейк</h3>
+                            <h4>150g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Творог, сыр Филадельфия, шоколадный топпинг</p>
+                    </div>
+                    <p class="dishes__prise">43 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+            </div>
+        </div> 
+
+        <!-- НАПИТКИ==================================================== -->
+
+        <div class="dishes__cardswrp"> 
+            <div class="dishes__cardsrow">
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink1.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Вода Тбау</h3>
+                            <h4>500g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Газированная и негазированная</p>
+                    </div>
+                    <p class="dishes__prise">18 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink2.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Имбирный лимонад</h3>
+                            <h4>1000g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Имбирь, лимон, сахар, мёд</p>
+                    </div>
+                    <p class="dishes__prise">68 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink3.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Клюквенный морс</h3>
+                            <h4>1000g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Клюква, сахар</p>
+                    </div>
+                    <p class="dishes__prise">68 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink4.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Нектар Добрый </h3>
+                            <h4>1000g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Сок фруктовый</p>
+                    </div>
+                    <p class="dishes__prise">48 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+            </div>
+
+            <div class="dishes__cardsrow dishes__cardsrow_two">
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink5.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Нектар мультифрукт</h3>
+                            <h4>1000g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Сок фруктовый</p>
+                    </div>
+                    <p class="dishes__prise">48 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink6.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Напиток "Coca-cola" ж/б</h3>
+                            <h4>330g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Напиток безалкогольный</p>
+                    </div>
+                    <p class="dishes__prise">27 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink7.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Напиток "Coca-cola"</h3>
+                            <h4>500g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Напиток безалкогольный</p>
+                    </div>
+                    <p class="dishes__prise">38 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+                <div class="dishes__card">
+                    <img class="dishes__image" src="img/drinks/drink8.png" alt="drink">
+                    <div class="dishes__cards-titles-wrp">
+                        <div class="dishes__cardtitle">
+                            <h3>Напиток "Fanta"</h3>
+                            <h4>500g</h4>
+                        </div>
+                        <p class="dishes__ingridients">Напиток безалкогольный</p>
+                    </div>
+                    <p class="dishes__prise">38 UAN</p>
+                    <img class="dishes__basket" src="img/dishes/basket.png" alt="">
+                </div>
+            </div>
+         </div> 
+    
+    </div><!--container -->
+</section>
+
+<section class="slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/slider/slide1.jpg" alt="slide1">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/slider/slide2.jpg" alt="slide2">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/slider/slide3.jpg" alt="slide3">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/slider/slide4.jpg" alt="slide4">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/slider/slide5.jpg" alt="slide5">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/slider/slide5.jpg" alt="slide5">
+            </div>
+        </div>
+        <div class="slider__instag-wrp">
+            <div class="slider__instag">
+                <p class="slider__instag-adress">Instagram: <span>@classic_kovel</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts">
+    <div class="container">
+        <h2>Заполните форму<br> и мы вам перезвоним</h2>
+        <form action="#" class="contacts__form">
+            <input type="text" name="" id="" placeholder="Ваше имя">
+            <input type="phone" name="" id="" placeholder="Номер телефона">
+            <button>
+                Отправить
+                <img src="img/Arrow.svg" alt="Arrow"> 
+            </button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© Classic Family Restaurant</p>
+        <img src="img/logo2.svg" alt="">
+        <p>Made with delight by <span>harmuder</span> </p>
+    </div>
+</footer>
+
+<!-- ОПОВЕЩЕНИЕ О ДЕМО ВЕРСИИ -->
+
+<div class="demo-wrp">
+    <div class="demo">
+        <span class="demo-close">&times;</span>
+        <p>Это демо версия сайта. Поэтому некоторые функции не работают.</p>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

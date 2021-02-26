@@ -1,0 +1,923 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+// * {
+//   border: solid 1px red;
+// }
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  background-image: url(../img/bg_main.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  .container {
+    width: 1160px;
+    height: 100%;
+    margin: 0 auto;
+    .header {
+      display: flex;
+    } //header...............
+  }
+  .menu {
+    display: flex;
+    &__item {
+      padding-right: 40px;
+      margin-top: 60px;
+      font-size: 16px;
+    }
+    & a {
+      color: #000;
+      transition: all 0.3s;
+      &:hover {
+        color: #f58656;
+      }
+    }
+  }
+  .logo {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .timework-tel {
+    display: flex;
+    align-items: center;
+    &__tel {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+      & p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      & img {
+        display: block;
+        width: 33px;
+        height: 33px;
+        margin-top: 5px;
+        margin-right: 15px;
+      }
+    }
+    &__timework {
+      margin-top: 40px;
+      margin-right: 40px;
+      & p {
+        font-size: 16px;
+      }
+    }
+  }
+   
+  &__title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 80px;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 18px;
+    width: 55%;
+    margin: 0 auto;
+    line-height: 24px;
+    margin-top: 15px;
+  }
+  &__stock {
+    position: absolute;
+    top: 43%;
+    right: 17%;
+    width: 200px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+    & span {
+      font-weight: 700;
+      color: #f87848;
+    }
+  }
+  &__basket-wrp {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    bottom: -20px;
+    cursor: pointer;
+  }
+  &__price-basket {
+    width: 120px;
+    height: 60px;
+    background-color: #3f3f3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 50px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 11px 0 11px 10px;
+      border-color: transparent transparent transparent  #3f3f3f;
+      position: absolute;
+      right: -7px;
+    }
+  }
+  &__image-basket {
+      position: relative;
+      bottom: 8px;
+      right: 30px;
+  }
+  &__good-counter {
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #FE3326;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  //Блок с хранением запушенных данных в корзине..........................................
+  &__basket-repository {
+    position: absolute;
+    bottom: -220px;
+    right: 50px;
+    width: 600px;
+    height: 200px;
+    background-color: #F0F5FB;
+    z-index: 5;
+    display: none;
+    padding: 20px 30px;
+    overflow: auto;
+    animation-name: smooth2;
+    animation-duration: 0.5s;
+  }
+  @keyframes smooth2{
+    from{
+      opacity: 0.1;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  
+  &__repository-wrp {
+    border-bottom: solid #000 2px;
+    padding-bottom: 10px;
+  }
+  &__counter-pricewrp {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  &__dishes-price-wrp {
+
+  }
+  &__name-dishes {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &__price-dishes {
+    font-size: 20px;
+    margin-top: 10px;
+    & span {
+      font-weight: 600;
+    }
+  }
+  &__counter-dishes {
+    display: flex;
+  
+  }
+  &__minus, &__plus {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__count {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  &__delete {
+    padding-left: 10px;
+    padding-bottom: 7px;
+    cursor: pointer;
+  }
+  &__full-price {
+    font-size: 20px;
+    margin-top: 50px;
+    background-color: #3f3f3f;
+    min-width: 200px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 30px 0 10px;
+    color: #fff;
+    justify-content: space-between;
+    & span {
+      font-size: 30px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  //header-adaptive===================================================
+
+  .header-adaptive {
+      display: none;
+  }
+
+  @media(max-width: 1200px) {
+    .container {
+      width: 90%;
+      padding-top: 20px;
+    }
+    .container .header {
+      display: none;
+    }
+
+    .header-adaptive {
+      display: block;
+      .burger-wrp {
+        position: fixed;
+        z-index: 10;
+        top: 40px;
+        right: 30px;
+      }
+      a {  
+        cursor: pointer;
+        padding: 12px 0;
+        
+        span {
+          position: relative;
+          display: block;
+          width: 20px;
+          height: 4px;
+          background: #222;
+          transition: all .2s ease-in-out;
+          
+          &:before, &:after {
+            position: absolute;
+            background: #222;
+            content: '';
+            width: 20px;
+            height: 4px;
+            transition: all .2s ease-in-out;
+          }
+          
+          &:before {
+            top: -8px;
+          }
+          
+          &:after {
+            top: 8px;
+          }
+        }
+      }
+      
+      a.active {
+        span {
+          background: transparent;  
+          
+          &:before {
+            transform: rotate(45deg) translate(5px, 6px);
+          }
+          
+          &:after {
+            transform: rotate(-45deg) translate(5px, -6px);
+          }
+        }
+      } 
+      .logo {
+        margin-top: 0px;
+        margin: 0 auto;
+      }
+      .logo__image {
+        margin: 0 auto;
+        display: block;
+      }
+      .burger-wrp {
+        width: 30px;
+        height: 30px;
+      }
+      .menu-adaptive {
+        transform: translateY(-100%);
+        transition: all 0.5s;
+        position: fixed;
+        z-index: 9;
+        width: 100%;
+        background-color: rgba(151, 232, 255, 0.986);
+        margin-left: auto;
+        top: 0;
+        right: 0;
+        padding: 20px;
+      }
+      .show {
+        transform: translateY(0);
+      }
+      .menu-wrp {
+
+      }
+      .menu__item {
+        margin-top: 20px;
+      }
+      .menu {
+        display: block;
+      }
+      .timework-tel {
+        display: block;
+      }
+      .timework-telmenu-wrp {
+        margin-top: 20px;
+      }
+      .timework-tel__tel {
+        margin-top: 20px;
+      }
+    }// Конец header-adaptive.............................
+   
+  }// Конец 1200 px......................
+
+  @media(max-width: 990px) {
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__stock p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  @media(max-width: 950px) {
+    &__stock {
+      right: 13%;
+    }
+  }
+  @media(max-width: 750px) {
+    &__stock {
+      right: 8%;
+    }
+    &__basket-repository {
+      width: 300px;
+      height: 400px;
+      bottom: -420px;
+    }
+    &__repository-wrp {
+      margin-top: 70px;
+    }
+  }
+
+  @media(max-width: 620px) {
+   &__title {
+     margin-top: 30px;
+   }
+    &__subtitle {
+      width: 90%;
+    }
+  }
+  @media(max-width: 560px) {
+    &__title {
+      margin-top: 100px;
+    }
+    &__stock {
+      top: 60%;
+      background-color: rgba(184, 184, 184, 0.762);
+    }
+  }
+  @media(max-width: 365px) {
+    &__title {
+      font-size: 35px;
+      margin-top: 70px;
+    }
+    
+  }
+
+} // Конец main секции=============================================================
+
+@media(max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+// Секция dishes==================================================================
+
+.dishes {
+  width: 100%;
+  min-height: 1150px;
+  background-image: url(../img/dishes/bg_dishes.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  &__title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &__tabs-row {
+    display: flex;
+  }
+  &__tabswrp {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  &__tab {
+    width: 135px;
+    height: 55px;
+    background-color: #eceef6;
+    border-radius: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    &_active {
+      background-color: #59aaf1;
+      color: #fff;
+    }
+  }
+  &__cardswrp {
+   
+  }
+  &__cardsrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  &__cardsrow_two {
+    margin-top: 20px;
+  }
+
+  &__card {
+    width: 260px;
+    height: 417px;
+    background-image: url(../img/dishes/border-card.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+  }
+  &__hit {
+      width: 60px;
+      height: 25px;
+      background-color: #FE3326;
+      color: #fff;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      border-radius: 3px;
+      left: 20px;
+      top: 20px;
+  }
+  &__image {
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+  &__cards-titles-wrp {
+    padding-left: 25px;
+    padding-right: 15px;
+  }
+  &__cardtitle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    & h3 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    & h4 {
+      font-size: 14px;
+      margin-top: 1px;
+    }
+  }
+  &__ingridients {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__prise {
+    font-size: 24px;
+    color: #121146;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__basket {
+    display: block;
+    margin: 0 auto;
+    margin-top: 26px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+ //Вспомогательные классы..........................................
+  &__cardswrp_show {
+    display: block;
+  }
+  &__hide {
+    display: none;
+  }
+  &__smooth {
+    animation-name: smooth;
+    animation-duration: 1.5s;
+  }
+  @keyframes smooth{
+    from{
+      opacity: 0.1;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+  @media(max-width: 1200px) {
+    .container {
+      margin: 0 auto;
+    }
+    &__title {
+      margin-top: 30px;
+    }
+    &__card {
+      margin-bottom: 20px;
+    }
+    &__cardtitle h3 {
+      font-size: 14px;
+    }
+    &__ingridients {
+      font-size: 12px;
+    }
+    &__basket {
+      margin-top: 10px;
+    }
+  }
+  @media(max-width: 990px) {
+    &__title {
+      font-size: 40px;
+    }
+  }
+  @media(max-width: 750px) {
+    &__tabs-row {
+      flex-direction: column;
+    }
+    &__tabs-row:last-child {
+      justify-content: center;
+    }
+    &__tab {
+      margin-bottom: 20px;
+    }
+  }
+  @media(max-width: 365px) {
+    &__title {
+      font-size: 35px;
+    }
+  }
+} // Конец секции dishes=================================================
+
+//СЕКЦИЯ SLIDER===============================================================
+
+.slider {
+  width: 100%;
+  min-height: 390px;
+  position: relative;
+ 
+
+  .swiper-container {
+    width: 100%;
+    height: 260px;
+    margin: 0 auto;
+  }
+  .swiper-wrapper {
+    margin: 0 auto;
+    width: 80%;
+    img {
+      display: block;
+      width: 100%;
+   }
+    & .swiper-slide {
+     
+    }
+  }
+  &__instag-wrp {
+    margin: 0 auto;
+    width: 480px;
+    height: 180px;
+    background-color: #FD9924;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    margin-left: -243px;
+    align-items: center;
+    top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__instag {
+    width: 440px;
+    height: 140px;
+    border: 3px solid rgba(255, 255, 255, 0.292);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    & span {
+      font-weight: 700;
+    }
+  }
+  &__instag-adress {
+    text-align: center;
+  }
+  @media(max-width: 1200px) {
+    .swiper-container {
+      width: 90%;
+    }
+    .swiper-wrapper {
+      width: 100%;
+    }
+    &__instag-wrp {
+      width: 40%;
+      height: 70%;
+    }
+    &__instag {
+      width: 90%;
+      height: 80%;
+    }
+  }
+  @media(max-width: 1150px) {
+    &__instag-wrp {
+      display: none;
+    }
+  }
+
+  @media(max-width: 944px) {
+    .swiper-container {
+      margin-top: 100px;
+    }
+  }
+}// Конец секции slider=====================================================
+
+// СЕКЦИЯ CONTACTS==============================================================
+
+.contacts {
+  width: 100%;
+  height: 675px;
+  background-image: url(../img/bg_contacts.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 80px;
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 60px;
+  }
+  &__form {
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    input {
+      width: 260px;
+      height: 60px;
+      border-radius: 57px;
+      margin-right: 20px;
+      margin-left: 20px;
+      border: #ECEEF6 solid 1px;
+      padding: 0 30px;
+    }
+    button {
+      width: 260px;
+      height: 60px;
+      border-radius: 57px;
+      margin-right: 20px;
+      margin-left: 20px;
+      background-color: #FE5626;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      transition: all 0.3s;
+      img {
+        display: inline-block;
+        margin-top: 3px;
+        margin-left: 25px;
+      }
+      &:hover {
+        background-color: #e27c5f;
+      }
+    }
+  }
+  @media(max-width: 885px) {
+    .container {
+      margin: 0 auto;
+    }
+    &__form {
+      flex-direction: column;
+      align-items: center;
+    }
+    input {
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  @media(max-width: 365px) {
+    h2 {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+}// Конец секции contacts=================================
+
+//СЕКЦИЯ footer==========================================================
+
+.footer {
+  width: 100%;
+  min-height: 120px;
+  position: relative;
+  padding-bottom: 50px;
+  top: -70px;
+  .container {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    margin-top: 35px;
+    font-size: 16px;
+    span {
+      font-weight: 700;
+    }
+  }
+  @media(max-width: 1200px) {
+    .container {
+      width: 90%;
+    }
+  }
+  @media(max-width: 720px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    img {
+      display: none;
+    }
+  }
+}// END FOOTER===================
+
+// ОПОВЕЩЕНИЕ О ДЕМО=======================================
+
+.demo-wrp {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.904);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    display: none;
+    transition: all 0.5s;
+}
+.demo {
+  max-width: 500px;
+  min-height: 400px;
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 20px 40px 20px;
+  p {
+    font-size: 35px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 100px;
+  }
+  span {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 60px;
+    cursor: pointer;
+  }
+}
